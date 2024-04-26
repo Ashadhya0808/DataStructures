@@ -1,0 +1,36 @@
+package com.org.dataStructures.abstractDataType.list;
+
+public class EmployeeNode {
+
+	private Employee employee;
+	private EmployeeNode node;
+
+	/**
+	 * 
+	 *//*
+		 * public EmployeeNode() { super(); }
+		 */
+	/**
+	 * @param employee
+	 */
+	public EmployeeNode(Employee employee) {
+		this.employee = employee;
+	}
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+
+	public EmployeeNode getNode() {
+		return node;
+	}
+
+	public void setNode(EmployeeNode node) {
+		this.node = node;
+	}
+
+}

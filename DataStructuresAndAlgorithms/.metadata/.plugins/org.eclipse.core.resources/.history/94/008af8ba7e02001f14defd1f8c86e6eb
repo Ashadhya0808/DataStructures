@@ -1,0 +1,15 @@
+package com.org.dataStructures.abstractDataType.list;
+
+public class EmployeeSinglyLLImpl {
+	
+	private EmployeeNode head;
+	
+	public void addNodeToFront(Employee employee) {
+		EmployeeNode newNode = new EmployeeNode(employee);
+		newNode.setNext(head);
+		head = newNode;
+	}
+	
+	public 
+
+}

@@ -1,0 +1,19 @@
+package com.org.dataStructures.abstractDataType.list;
+
+public class ListImpl {
+
+	public static void main(String[] args) {
+
+		Employee[] emp = new Employee[10];
+		emp[0] = new Employee("Sha", "Run", 1);
+		emp[1] = new Employee("Ya", "Sha", 2);
+		emp[2] = new Employee("Run", "ya", 3);
+		emp[3] = new Employee("Sha", "Run", 4);
+
+		for(int i = 0 ; i < emp.length ; i++) {
+			System.out.println("What? "+ i);
+			System.out.println(emp[i].getFirstName());
+		}
+	}
+
+}

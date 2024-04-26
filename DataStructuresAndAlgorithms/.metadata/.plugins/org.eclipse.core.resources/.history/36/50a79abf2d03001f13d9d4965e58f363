@@ -1,0 +1,22 @@
+package com.org.dataStructures.abstractDataType.list;
+
+import java.util.LinkedList;
+
+public class SinglyLinkedListImpl {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		EmployeeSinglyLLImpl employeeList = new EmployeeSinglyLLImpl();
+		
+		employeeList.addNodeToFront(new Employee("Sha", "Run", 1));
+		employeeList.addNodeToFront(new Employee("Run", "Ya", 2));
+		employeeList.addNodeToFront(new Employee("Shas", "Runs", 3));
+		employeeList.addNodeToFront(new Employee("Runs", "Yas", 4));
+		
+		employeeList.printList();
+
+	}
+	
+
+}

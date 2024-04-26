@@ -1,0 +1,27 @@
+package com.org.dataStructures.abstractDataType.list;
+
+import java.util.List;
+
+public class DoublyLinkedListImpl {
+
+	public static void main(String[] args) {
+		EmployeeDoublyLinkedList employeeList = new EmployeeDoublyLinkedList();
+		
+		System.out.println("Is double list empty - " + employeeList.isEmpty());
+		
+		employeeList.addNodeToFront(new Employee("Sha", "Run", 1));
+		employeeList.addNodeToFront(new Employee("Run", "Ya", 2));
+		employeeList.addNodeToEnd(new Employee("Shas", "Runs", 3));
+		employeeList.addNodeToEnd(new Employee("Runs", "Yas", 4));
+		employeeList.addBefore(new Employee("Bangaram","Konda",5), new Employee("Shas", "Runs", 3));
+		
+		System.out.println("Size - "+employeeList.getSize());
+		employeeList.removeNodeFromEnd();
+		System.out.println("Size - "+employeeList.getSize());
+		System.out.println("Is double list empty - " + employeeList.isEmpty());
+		
+		employeeList.printList();
+
+	}
+
+}

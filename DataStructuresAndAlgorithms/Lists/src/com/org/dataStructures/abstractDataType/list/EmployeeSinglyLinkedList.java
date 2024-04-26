@@ -1,0 +1,52 @@
+package com.org.dataStructures.abstractDataType.list;
+
+public class EmployeeSinglyLinkedList {
+	
+	private EmployeeNode head;
+	
+	private int size;
+	
+	public void addNodeToFront(Employee employee) {
+		EmployeeNode newNode = new EmployeeNode(employee);
+		newNode.setNext(head);
+		head = newNode;
+		size++;
+	}
+	
+	public int getSize() {
+		return size;
+	}
+	
+	public boolean isEmpty() {
+		if(head == null) {
+			return true;
+		}
+		return false;
+	}
+	
+	public EmployeeNode removeNodeFromFront() {
+		
+		if(isEmpty()) {
+			return null;
+		}
+		
+		EmployeeNode removedNode = head;
+		head = removedNode.getNext();
+		size--;
+		removedNode.setNext(null);
+		return removedNode;
+		
+	}
+	
+	public void printList() {
+		EmployeeNode current = head;
+		System.out.print("HEAD -> ");
+		while(current != null) {
+			System.out.print(current);
+			System.out.print(" -> ");
+			current = current.getNext();
+		}
+		System.out.print("null");
+	}
+
+}

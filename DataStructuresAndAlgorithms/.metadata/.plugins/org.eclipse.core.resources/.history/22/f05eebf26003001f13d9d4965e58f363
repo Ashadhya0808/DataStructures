@@ -1,0 +1,85 @@
+package com.org.dataStructures.abstractDataType.list;
+
+public class EmployeeDoublyLinkedList {
+
+	private EmployeeNode head;
+	private EmployeeNode tail;
+	
+	private int size;
+	
+	public void addNodeToFront(Employee employee) {
+		EmployeeNode newNode = new EmployeeNode(employee);
+		newNode.setNext(head);
+		newNode.setPrevious(null);
+		if(isEmpty()) {
+			tail = newNode;
+		}else {
+			head.setPrevious(newNode);
+		}
+		head = newNode;
+		size++;
+	}
+	
+	public void addNodeToEnd(Employee employee) {
+		EmployeeNode newNode = new EmployeeNode(employee);
+		newNode.setNext(null);
+		newNode.setPrevious(tail);
+		if(isEmpty()) {
+			head = newNode;
+		}else {
+			tail.setNext(newNode);
+		}
+		tail = newNode;
+		size++;
+	}
+	
+	public int getSize() {
+		return size;
+	}
+	
+	public boolean isEmpty() {
+		if(head == null && tail == null) {
+			return true;
+		}
+		return false;
+	}
+	
+	public EmployeeNode removeNodeFromFront() {
+		
+		if(isEmpty()) {
+			return null;
+		}
+		
+		EmployeeNode removedNode = head;
+		head = removedNode.getNext();
+		head.setPrevious(removedNode.getPrevious());
+		size--;
+		removedNode.setNext(null);
+		return removedNode;
+		
+	}
+	
+	public EmployeeNode removeNodeFromEnd() {
+		if(isEmpty()) {
+			return null;
+		}
+		
+		EmployeeNode removedNode = tail;
+		tail = removedNode.getPrevious();
+		tail.setNext(removedNode.getNext());
+		size--;
+		removedNode.setPrevious(null);
+		return removedNode;
+	}
+	
+	public void printList() {
+		EmployeeNode current = head;
+		System.out.print("HEAD -> ");
+		while(current != null) {
+			System.out.print(current);
+			System.out.print(" <-> ");
+			current = current.getNext();
+		}
+		System.out.print("null");
+	}
+}

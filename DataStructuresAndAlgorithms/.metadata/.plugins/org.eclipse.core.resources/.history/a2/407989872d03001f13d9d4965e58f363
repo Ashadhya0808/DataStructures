@@ -1,0 +1,24 @@
+package com.org.dataStructures.abstractDataType.list;
+
+public class EmployeeSinglyLLImpl {
+	
+	private EmployeeNode head;
+	
+	public void addNodeToFront(Employee employee) {
+		EmployeeNode newNode = new EmployeeNode(employee);
+		newNode.setNext(head);
+		head = newNode;
+	}
+	
+	public void printList() {
+		EmployeeNode current = head;
+		System.out.print("HEAD -> ");
+		while(current != null) {
+			System.out.print(current);
+			System.out.print(" -> ");
+			current = current.getNext();
+		}
+		System.out.print("null");
+	}
+
+}

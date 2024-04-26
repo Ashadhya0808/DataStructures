@@ -1,0 +1,24 @@
+package com.org.dataStructuresCources;
+
+public class InsertionSortWithRecursion {
+
+	public static void main(String[] args) {
+		
+		int[] intArray = { 20,35,-15,7,55,1,-22 };
+		
+		insertionSort(intArray,0,intArray.length);
+		
+		for(int i = 0 ; i < intArray.length ; i++) {
+			System.out.println(intArray[i]);
+		}
+
+	}
+
+	private static void insertionSort(int[] intArray, int firstIndexOfUnsortedArray, int length) {
+		
+		if(firstIndexOfUnsortedArray > length) {
+			return;
+		}
+	}
+
+}
