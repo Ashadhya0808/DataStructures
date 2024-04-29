@@ -1,0 +1,52 @@
+package academy.learnprogramming.stackschallenge;
+import java.util.LinkedList;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // should return true
+        System.out.println(checkForPalindrome("abccba"));
+        // should return true
+        System.out.println(checkForPalindrome("Was it a car or a cat I saw?"));
+        // should return true
+        System.out.println(checkForPalindrome("I did, did I?"));
+        // should return false
+        System.out.println(checkForPalindrome("hello"));
+        // should return true
+        System.out.println(checkForPalindrome("Don't nod"));
+    }
+
+    public static boolean checkForPalindrome(String string) {
+    	//char[] stringArray = string.toCharArray();
+    	LinkedList<Character> stack = new LinkedList<Character>();
+    	//for(int i = 0; i < stringArray.length ; i++) {
+    	//	if(Character.isAlphabetic(stringArray[i])) {
+    	//		stack.push(stringArray[i]);
+    	//		}
+    	//}
+    	for(int i = 0 ; i < string.length() ; i++) {
+    		if(Character.isAlphabetic(string.charAt(i)))
+    		stack.push(string.charAt(i));
+    	}
+    	String resultString = new String();
+    	while(!stack.isEmpty()) {
+    		resultString = resultString + stack.pop().toString().toLowerCase();
+    	}
+    	//System.out.println(resultString);
+    	return isPalindrome(resultString);
+    }
+    
+    public static boolean isPalindrome(String s){
+        int left = 0;
+        int right = s.length() - 1;
+
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}

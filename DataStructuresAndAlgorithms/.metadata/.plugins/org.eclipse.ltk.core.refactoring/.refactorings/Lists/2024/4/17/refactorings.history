@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Employee.java&apos; to &apos;Stacks/src/com.org.dataStructureAlgorithms.stacks&apos;&#x0D;&#x0A;- Original project: &apos;Lists&apos;&#x0D;&#x0A;- Destination element: &apos;Stacks/src/com.org.dataStructureAlgorithms.stacks&apos;&#x0D;&#x0A;- Original element: &apos;com.org.dataStructures.abstractDataType.list.Employee.java&apos;" description="Copy compilation unit" destination="=Stacks/src&lt;com.org.dataStructureAlgorithms.stacks" element1="/src&lt;com.org.dataStructures.abstractDataType.list{Employee.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1714175590841" units="1" version="1.0"/>
+</session>

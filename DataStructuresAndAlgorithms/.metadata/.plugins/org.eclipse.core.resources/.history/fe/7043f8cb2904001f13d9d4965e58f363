@@ -1,0 +1,28 @@
+package com.org.dataStructureAlgorithms.stacks;
+
+public class ArrayStack {
+	
+	private Employee[] stack;
+	private int top = 0;
+	
+	public ArrayStack(int capacity) {
+		stack = new Employee[capacity];
+	}
+	
+	public void push(Employee employee) {
+		stack[top] = employee;
+		top++;
+	}
+	
+	public Employee pop() {
+		Employee removedEmployee = stack[top];
+		stack[top] = null;
+		top--;
+		return removedEmployee;
+	}
+	
+	public Employee peek() {
+		return stack[top];
+	}
+
+}

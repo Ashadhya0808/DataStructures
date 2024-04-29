@@ -1,0 +1,37 @@
+package academy.learnprogramming.stackschallenge;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // should return true
+        //System.out.println(checkForPalindrome("abccba"));
+        // should return true
+        //System.out.println(checkForPalindrome("Was it a car or a cat I saw?"));
+        // should return true
+        //System.out.println(checkForPalindrome("I did, did I?"));
+        // should return false
+        System.out.println(checkForPalindrome("hello"));
+        // should return true
+        //System.out.println(checkForPalindrome("Don't nod"));
+    }
+
+    public static boolean checkForPalindrome(String string) {
+    	char[] stringArray = string.toCharArray();
+    	LinkedList<Character> stack = new LinkedList<Character>();
+    	for(int i = 0; i < stringArray.length ; i++) {
+    		if(Character.isAlphabetic(stringArray[i])) {
+    			stack.push(stringArray[i]);
+    			}
+    	}
+    	StringBuilder resultString = new StringBuilder();
+    	while(!stack.isEmpty()) {
+    		resultString.append(stack.pop());
+    	}
+    	
+    	System.out.println("String" + resultString);
+    	System.out.println("Reverse String " + resultString.reverse());
+        return resultString.reverse().equals(resultString);
+    }
+}

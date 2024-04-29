@@ -1,0 +1,15 @@
+package com.org.dataStructureAlgorithms.stacks;
+
+public class StacksByArrayImpl {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayStack stack = new ArrayStack(10);
+		stack.push(new Employee("Sharanya", "Sagadam",1));
+		stack.push(new Employee("Shanu", "Saga",2));
+		stack.push(new Employee("Siri","para",3));
+
+	}
+
+}

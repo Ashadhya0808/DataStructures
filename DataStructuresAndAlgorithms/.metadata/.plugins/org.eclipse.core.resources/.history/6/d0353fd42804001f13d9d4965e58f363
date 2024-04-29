@@ -1,0 +1,9 @@
+package com.org.dataStructureAlgorithms.stacks;
+
+public class ArrayStack {
+	
+	private Employee[] stack;
+	private int top;
+	
+
+}

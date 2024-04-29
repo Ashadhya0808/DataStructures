@@ -1,0 +1,42 @@
+package com.org.dataStructureAlgorithms.stacks;
+
+import java.util.EmptyStackException;
+import java.util.LinkedList;
+
+public class LinkedListStack {
+
+	private LinkedList<Employee> stack;
+	private int top = 0;
+	
+	public void push(Employee employee) {
+		stack.push(employee);
+		top++;
+	}
+	
+	public Employee pop() {
+		if(isEmpty()) {
+			throw new StackOverflowError();
+		}
+		top--;
+		return stack.pop();
+	}
+	
+	public boolean isEmpty() {
+		return top == 0;
+	}
+	
+	public Employee peek() {
+		if(isEmpty()) {
+			throw new StackOverflowError();
+		}
+		return stack.peek();
+	}
+	
+	public Employee[] returnStack() {
+		return stack;
+	}
+	
+	public void printStack() {
+	}
+	
+}

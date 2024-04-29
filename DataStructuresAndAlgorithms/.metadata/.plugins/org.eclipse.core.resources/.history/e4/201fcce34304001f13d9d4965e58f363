@@ -1,0 +1,38 @@
+package com.org.dataStructureAlgorithms.stacks;
+
+public class ArrayStack {
+	
+	private Employee[] stack;
+	private int top = 0;
+	
+	public ArrayStack(int capacity) {
+		stack = new Employee[capacity];
+	}
+	
+	public void push(Employee employee) {
+		if(top == stack.length) {
+			//need to resize the array
+			Employee[] newArray = new Employee[2 * stack.length];
+			System.arraycopy(stack, 0, newArray, 0, stack.length);
+		}
+		stack[top] = employee;
+		top++;
+	}
+	
+	public Employee pop() {
+		Employee removedEmployee = stack[top-1];
+		stack[top-1] = null;
+		top--;
+		return removedEmployee;
+	}
+	
+	public Employee peek() {
+		//System.out.println("top is at: " + top);
+		return stack[top-1];
+	}
+	
+	public Employee[] printStack() {
+		return stack;
+	}
+
+}
